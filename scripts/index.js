@@ -6,11 +6,46 @@
  * @param {number} length La taille que doit faire le mots de passe.
  * @returns Un mot de passe sécurisé
  */
+function range(start, end) {
+  var ans = [];
+  for (let i = start; i <= end; i++) {
+      ans.push(i);
+  }
+  return ans;
+}
 function generatePassword(length) {
-  let pass = 'Not working yet';
-
+  possibility=[]
+  if (shouldIncludeLowerCase() == true){
+    possibility[possibility.length]=("low");
+  }
+  if (shouldIncludeUpperCase() == true){
+    possibility[possibility.length]=("up");
+  }
+  if (shouldIncludeNumbers() ==true){
+    possibility[possibility.length]=("num");
+  }
+  if (shouldIncludeSymbols() == true){
+    possibility[possibility.length]=("sym");
+  }
+  let pass='';
+  for (i in range(0,length)){
+    result=possibility[randomInt(0,possibility.length)];
+    if (result == "up"){
+      pass+=randomUpperCase();
+    }
+    if (result == "low"){
+      pass+=randomLowerCase();
+    }
+    if (result == "num"){
+      pass+=randomNumber();
+    }
+    if (result == "sym"){
+      pass+=randomSymbol();
+    }
+  }
   return pass;
 }
+
 
 /**----------------------------------- */
 /**----------------------------------- */

@@ -3,18 +3,18 @@
 
 :root {
   --background-color: #f1f1f1;
-  --secondary-background-color: #006999;
-  --primary-color: #0096dd;
-  --secondary-color: #36bfff;
+  --secondary-background-color: #467a22;
+  --primary-color: #135808;
+  --secondary-color: #7dd600;
   --primary-font-family: Arial, Helvetica, sans-serif;
   --secondary-font-family: Consolas, monaco, monospace;
   --primary-font-color: #f5f5f5;
-  --shadow-color: black;
+  --shadow-color: rgb(0, 0, 0);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #353535;
+    --background-color: #045238;
   }
 }
 
